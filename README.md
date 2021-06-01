@@ -16,15 +16,25 @@ In this assessment, our objective is to help exexecutives at a large bank unders
 
 ## ProjectStructure
 The *notebooks* directory contains Jupyter notebooks for the discovery process:
+    
     *1.0-jpb-eda.ipynb*: EDA of the data
+    
     *2.0-jpb-preprocessing.ipynb*: preprocessing the data for a given model
+    
     *3.0-jpb-model-selection-assessment.ipynb*: tuning various models and selectinng the best model
+
 The *packages* directory would have contained an actual package, setup information, logging, testing, a  prediction script, to name a few, if more time was available; however, there still are various scripts for training the model we deemed suitable from discovery:
+    
     *config* directory:
+        
         *config.py*: contains global variables for various scripts
+    
     *processing* directory:
+        
         *data_managemennt.py*: helper functions to load the data, clean the data, engineer features, and save our final pipeline.
+    
     *pipeline.py*: pipeline from scikit-learn's Pipeline class, where we standardize our numerical features, dummy encode the categorical features, and apply our XGBoost Classifier to the processed data.
+    
     *train_pipeline.py*: script that uses functions from *data_management.py* and our pipeline from *pipeline.py* to train our model on all of the data points given.
     
 ## Limitations

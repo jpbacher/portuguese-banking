@@ -17,28 +17,36 @@ In this assessment, our objective is to help exexecutives at a large bank unders
 ## ProjectStructure
 The *notebooks* directory contains Jupyter notebooks for the discovery process:
     
-    *1.0-jpb-eda.ipynb*: EDA of the data
+  *1.0-jpb-eda.ipynb*: EDA of the data
     
-    *2.0-jpb-preprocessing.ipynb*: preprocessing the data for a given model
+  *2.0-jpb-preprocessing.ipynb*: preprocessing the data for a given model
     
-    *3.0-jpb-model-selection-assessment.ipynb*: tuning various models and selectinng the best model
+  *3.0-jpb-model-selection-assessment.ipynb*: tuning various models and selectinng the best model
 
-The *packages* directory would have contained an actual package, setup information, logging, testing, a  prediction script, to name a few, if more time was available; however, there still are various scripts for training the model we deemed suitable from discovery:
+The *packages* directory would have contained an actual package, with setup information, logging, testing, a  prediction script, to name a few, if more time was available; however, there still are various scripts for training the model we deemed suitable from discovery:
     
-    *config* directory:
+*config* directory:
         
-        *config.py*: contains global variables for various scripts
+  *config.py*: contains global variables for various scripts
     
-    *processing* directory:
+*processing* directory:
         
-        *data_managemennt.py*: helper functions to load the data, clean the data, engineer features, and save our final pipeline.
+  *data_managemennt.py*: helper functions to load the data, clean the data, engineer features, and save our final pipeline.
     
-    *pipeline.py*: pipeline from scikit-learn's Pipeline class, where we standardize our numerical features, dummy encode the categorical features, and apply our XGBoost Classifier to the processed data.
+  *pipeline.py*: pipeline from scikit-learn's Pipeline class, where we standardize our numerical features, dummy encode the categorical features, and apply our XGBoost Classifier to the processed data.
     
-    *train_pipeline.py*: script that uses functions from *data_management.py* and our pipeline from *pipeline.py* to train our model on all of the data points given.
+ *train_pipeline.py*: script that uses functions from *data_management.py* and our pipeline from *pipeline.py* to train our model on all of the data points given.
     
 ## Limitations
-Given the short time constraint, there were numerous areas we were unable to pursue further. First and most importantly, a deeper understanding of the predictors to our response variable would provide valuable information - this comprehension would allow us to do meaningful feature engineering, which could provide better signal for a given model. Second, we could have attempted various preprocessing techniques for our tree-based models, possibly a simple imputation of -1's to missing values, as opposed to creating a new category given. Also, we could have attempted target encoding on some of our categorical features, as opposed to just dummy encoding. By doing the former, it would give our numerical features a 'better chance' of having greater importance to the model. Third, spending more time tuning our hyperparmaeters, especially for more complex models like XGBoost. Last, as stated above, we could have created a package of our model that could be used in different applications.
+Given the short time constraint, there were numerous areas we were unable to pursue further. 
+
+First and most importantly, a deeper understanding of the predictors to our response variable would provide valuable information - this comprehension would allow us to do meaningful feature engineering, which could provide better signal for a given model. 
+
+Second, we could have attempted various preprocessing techniques for our tree-based models, possibly a simple imputation of -1's to missing values, as opposed to creating a new category given. Also, we could have attempted target encoding on some of our categorical features, as opposed to just dummy encoding. By doing the former, it would give our numerical features a 'better chance' of having greater importance to the model. 
+
+Third, spending more time tuning our hyperparmaeters, especially for more complex models like XGBoost. 
+
+Last, as stated above, we could have created a package of our model that could be used in different applications.
 
 ## Considerations/Decisions
 In this evaluation, we assumed there was an equal cost for a False Negative to a False Positive; so, we chose the F1 score to optimize the models, and kept the threshold at 0.5. If there were different costs, we would create a new scorer based on the costs, and adjusted our probability thresholds to determine the optimal (minimal) cost.

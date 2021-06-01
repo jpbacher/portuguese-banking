@@ -4,7 +4,7 @@ Determining which potential customers' characteristics are best at predicting a 
 
 ## Table of Contents
 * [Abstract](#Abstract)
-* [Project Structure](#Project Structure)
+* [Project Structure](#ProjectStructure)
 * [Limitations](#Limitations)
 * [Considerations/Decisions](#Considerations/Decisions)
 * [Plots](#Plots)
@@ -14,7 +14,7 @@ Determining which potential customers' characteristics are best at predicting a 
 ## Abstract
 In this assessment, our objective is to help exexecutives at a large bank understand which characteristics of potential customers have the greatest influence in purchasing a bank product. The bank is interested in using a predictive model to score each customer's propensity to purchase a product. The data used to build our model can be found: [Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing).
 
-## Project Structure
+## ProjectStructure
 The *notebooks* directory contains Jupyter notebooks for the discovery process:
     *1.0-jpb-eda.ipynb*: EDA of the data
     *2.0-jpb-preprocessing.ipynb*: preprocessing the data for a given model

@@ -13,7 +13,7 @@ Determining which potential customers' characteristics are best at predicting a 
 * [Contact](#Contact)
 
 ## Abstract
-In this assessment, our objective is to help exexecutives at a large bank understand which characteristics of potential customers have the greatest influence in purchasing a bank product. The bank is interested in using a predictive model to score each customer's propensity to purchase a product. The data used to build our model can be found here: [Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing).
+In this assessment, our objective is to help executives at a large bank understand which characteristics of potential customers have the greatest influence in purchasing a bank product. The bank is interested in using a predictive model to score each customer's propensity to purchase a product. The data used to build our model can be found here: [Bank Marketing Data Set](https://archive.ics.uci.edu/ml/datasets/Bank+Marketing).
 
 ## ProjectStructure
 The *notebooks* directory contains Jupyter notebooks for the discovery process:
